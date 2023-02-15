@@ -1,0 +1,18 @@
+.link {
+  color: currentcolor;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--primary);
+}
+
+.link:hover.link--disabled,
+.link:focus.link--disabled {
+  color: currentcolor;
+}
+
+.link--disabled {
+  cursor: default;
+  opacity: 0.5;
+}
