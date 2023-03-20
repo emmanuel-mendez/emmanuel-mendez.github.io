@@ -1,0 +1,22 @@
+---
+import Footer from "../components/organisms/Footer.astro";
+import Header from "../components/organisms/Header.astro";
+---
+
+<body class="layout">
+  <Header />
+  <slot />
+  <Footer />
+</body>
+
+<style>
+  .layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template: auto 1fr auto / 1fr;
+    grid-template-areas:
+      "layout-header"
+      "layout-content"
+      "layout-footer";
+  }
+</style>
