@@ -1,4 +1,9 @@
 .container {
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 85.375rem;
+}
+
+@media screen and (min-width: 26.9375rem) {
+  .container {
+    margin: 0 auto;
+  }
 }
