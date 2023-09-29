@@ -1,6 +1,6 @@
 # Emmanuel Mendez
 
-I'm a **Computer Engineer** with more than **Two Years** of experience creating web pages, websites and web applications using **TypeScript** and **Frontend Frameworks** like **React**, **Angular** and **Svelte**.
+I'm a **Computer Engineer** with more than **Two Years** of experience creating high performant and user retention web pages, websites and web applications using **TypeScript** and **Frontend Frameworks** like **React**, **Angular** and **Svelte**.
 
 I have a solid understanding of web development concepts and best practices, and I can write clean and scalable code applying **Programming Principles**, **Object-oriented Programming**, **Reactive Programming** and **Functional Programming**, **Design Patterns** and **Atomic Design**.
 
