@@ -27,4 +27,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npx ng deploy --repo=https://github.com/emmanuel-mendez/emmanuel-mendez.github.io.git --name=emmanuel-mendez --email=emmanuel-mendez.dev@outlook.com
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
