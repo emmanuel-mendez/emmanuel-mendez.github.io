@@ -25,6 +25,6 @@ jobs:
         run: npm run build -- --base-href=/emmanuel-mendez.github.io/
 
       - name: Deploy to GitHub Pages
-        run: npx ng deploy --repo=https://github.com/emmanuel-mendez/emmanuel-mendez.github.io.git --name=emmanuel-mendez --email=emmanuel-mendez.dev@outlook.com
+        run: ng deploy --repo=https://github.com/emmanuel-mendez/emmanuel-mendez.github.io --name=emmanuel-mendez --email=emmanuel-mendez.dev@outlook.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
