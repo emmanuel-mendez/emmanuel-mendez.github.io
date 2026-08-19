@@ -1,7 +1,7 @@
 <section class="projects">
   <h2 class="projects__title">Projects</h2>
   <div class="projects__grid">
-    @for (project of projects; track project.title) {
+    @for (project of projects; track project.slug) {
       <article class="projects__card">
         <div class="projects__card-header">
           <span class="material-symbols-outlined projects__card-icon">{{ project.icon }}</span>
@@ -14,17 +14,13 @@
           }
         </ul>
         <div class="projects__card-actions">
-          @if (project.link) {
-            <a
-              class="projects__card-link"
-              [href]="project.link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="material-symbols-outlined projects__card-link-icon">open_in_new</span>
-              Live
-            </a>
-          }
+          <a
+            class="projects__card-link"
+            [routerLink]="['/projects', project.slug]"
+          >
+            <span class="material-symbols-outlined projects__card-link-icon">open_in_new</span>
+            Details
+          </a>
           @if (project.sourceCode) {
             <a
               class="projects__card-link"
