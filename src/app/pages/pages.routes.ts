@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home';
 import { Projects } from './projects/projects';
+import { ProjectDetail } from './projects/project-detail/project-detail';
 import { PageNotFound } from './page-not-found/page-not-found';
 
 const SUFFIX = ' - Emmanuel Mendez';
@@ -14,6 +15,11 @@ export const routes: Routes = [
     path: 'projects',
     component: Projects,
     title: `Projects${SUFFIX}`,
+  },
+  {
+    path: 'projects/:slug',
+    component: ProjectDetail,
+    title: `Project${SUFFIX}`,
   },
   {
     path: '**',

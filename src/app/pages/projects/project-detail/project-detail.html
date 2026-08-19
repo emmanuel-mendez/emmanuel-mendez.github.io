@@ -1,0 +1,56 @@
+<app-layout>
+  @if (project(); as project) {
+    <article class="project-detail">
+      <a class="project-detail__back" routerLink="/projects">
+        <span class="material-symbols-outlined project-detail__back-icon">arrow_back</span>
+        Back to Projects
+      </a>
+
+      <div class="project-detail__header">
+        <span class="material-symbols-outlined project-detail__icon">{{ project.icon }}</span>
+        <h1 class="project-detail__title">{{ project.title }}</h1>
+      </div>
+
+      <p class="project-detail__content">{{ project.content }}</p>
+
+      <ul class="project-detail__tags">
+        @for (tech of project.technologies; track tech) {
+          <li class="project-detail__tag">{{ tech }}</li>
+        }
+      </ul>
+
+      <div class="project-detail__actions">
+        @if (project.link) {
+          <a
+            class="project-detail__link"
+            [href]="project.link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="material-symbols-outlined project-detail__link-icon">open_in_new</span>
+            Live Demo
+          </a>
+        }
+        @if (project.sourceCode) {
+          <a
+            class="project-detail__link"
+            [href]="project.sourceCode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="material-symbols-outlined project-detail__link-icon">code</span>
+            Source Code
+          </a>
+        }
+      </div>
+    </article>
+  } @else {
+    <div class="project-detail project-detail--not-found">
+      <p>Project not found.</p>
+      <a class="project-detail__back" routerLink="/projects">
+        <span class="material-symbols-outlined project-detail__back-icon">arrow_back</span>
+        Back to Projects
+      </a>
+    </div>
+  }
+</app-layout>

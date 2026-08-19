@@ -1,3 +1,21 @@
 <app-layout>
-  <p>projects</p>
+  <section class="projects">
+    <h1 class="projects__title">Projects</h1>
+    <div class="projects__grid">
+      @for (project of projects; track project.slug) {
+        <a class="projects__card" [routerLink]="['/projects', project.slug]">
+          <div class="projects__card-header">
+            <span class="material-symbols-outlined projects__card-icon">{{ project.icon }}</span>
+            <h2 class="projects__card-title">{{ project.title }}</h2>
+          </div>
+          <p class="projects__card-description">{{ project.description }}</p>
+          <ul class="projects__card-tags">
+            @for (tech of project.technologies; track tech) {
+              <li class="projects__card-tag">{{ tech }}</li>
+            }
+          </ul>
+        </a>
+      }
+    </div>
+  </section>
 </app-layout>
