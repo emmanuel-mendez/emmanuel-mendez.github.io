@@ -71,7 +71,9 @@ describe('Navigation', () => {
     menuButton.click();
     fixture.detectChanges();
 
+    const backdrop = fixture.nativeElement.querySelector('.navigation__backdrop');
     const mobileMenu = fixture.nativeElement.querySelector('.navigation__menu');
+    expect(backdrop).toBeTruthy();
     expect(mobileMenu).toBeTruthy();
 
     const homeLink = fixture.nativeElement.querySelector('.navigation__menu .navigation__link');
@@ -79,7 +81,18 @@ describe('Navigation', () => {
     fixture.detectChanges();
 
     const hiddenMenu = fixture.nativeElement.querySelector('.navigation__menu');
+    const hiddenBackdrop = fixture.nativeElement.querySelector('.navigation__backdrop');
     expect(hiddenMenu).toBeFalsy();
+    expect(hiddenBackdrop).toBeFalsy();
+    expect(component.opened()).toBe(false);
+
+    menuButton.click();
+    fixture.detectChanges();
+
+    backdrop.click();
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('.navigation__menu')).toBeFalsy();
     expect(component.opened()).toBe(false);
   });
 });

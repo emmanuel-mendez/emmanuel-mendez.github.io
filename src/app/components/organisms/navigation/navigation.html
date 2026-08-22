@@ -21,6 +21,13 @@
     </button>
 
     @if (opened()) {
+      <button
+        class="navigation__backdrop"
+        type="button"
+        aria-label="Close navigation menu"
+        (click)="closeMenu()"
+      ></button>
+
       <ul class="navigation__menu">
         <li class="navigation__item">
           <a class="navigation__link" href="/" (click)="closeMenu()">Home</a>
