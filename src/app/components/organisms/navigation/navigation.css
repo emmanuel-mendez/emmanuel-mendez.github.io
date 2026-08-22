@@ -26,7 +26,7 @@
 }
 
 .navigation__icon {
-  font-size: 2rem;
+  font-size: var(--extra-extra-extra-large);
 }
 
 .navigation__menu,
@@ -90,7 +90,7 @@
   width: 100%;
   padding: 1rem 1.25rem;
   color: var(--white);
-  font-size: 1.2rem;
+  font-size: var(--large);
   text-decoration: none;
   text-align: center;
   overflow: hidden;

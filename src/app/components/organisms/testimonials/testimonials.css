@@ -8,7 +8,7 @@
 }
 
 .testimonials__title {
-  font-size: 1.75rem;
+  font-size: var(--extra-extra-large);
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
@@ -53,7 +53,7 @@
 
 .testimonials__quote-icon {
   --icon-fill: 1;
-  font-size: 2rem;
+  font-size: var(--extra-extra-extra-large);
   font-variation-settings:
     'FILL' var(--icon-fill),
     'wght' 400,
@@ -86,7 +86,7 @@
 }
 
 .testimonials__author-role {
-  font-size: 0.875rem;
+  font-size: var(--extra-extra-small);
   opacity: 0.8;
 }
 
@@ -97,7 +97,7 @@
 
 .testimonials__star {
   --icon-fill: 0;
-  font-size: 1.25rem;
+  font-size: var(--large);
   font-variation-settings:
     'FILL' var(--icon-fill),
     'wght' 400,

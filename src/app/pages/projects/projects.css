@@ -10,7 +10,7 @@
   }
 
   .projects__title {
-    font-size: 1.75rem;
+    font-size: var(--extra-extra-large);
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: light-dark(var(--primary), var(--white));
@@ -50,7 +50,7 @@
   }
 
   .projects__card-icon {
-    font-size: 1.75rem;
+    font-size: var(--extra-extra-large);
     color: light-dark(var(--primary), var(--analogous--primary));
     transition: color 0.2s ease;
     font-variation-settings:
@@ -61,13 +61,13 @@
   }
 
   .projects__card-title {
-    font-size: 1.125rem;
+    font-size: var(--medium);
     font-weight: 600;
   }
 
   .projects__card-description {
     flex: 1;
-    font-size: 0.875rem;
+    font-size: var(--extra-small);
     line-height: 1.6;
     opacity: 0.85;
   }
@@ -84,7 +84,7 @@
   .projects__card-tag {
     padding: 0.25rem 0.625rem;
     border-radius: 0.25rem;
-    font-size: 0.75rem;
+    font-size: var(--extra-extra-small);
     font-weight: 500;
     background-color: light-dark(var(--analogous--primary), var(--analogous--secondary-50));
     color: var(--white);
