@@ -33,6 +33,12 @@ describe('Navigation', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should expose reusable navigation items', () => {
+    expect(component.navigationItems).toEqual([
+      { href: '/projects', label: 'Projects' },
+    ]);
+  });
+
   it('should render desktop list for desktop devices', () => {
     const list = fixture.nativeElement.querySelector('.navigation__list');
     const menuButton = fixture.nativeElement.querySelector('.navigation__button');
@@ -89,7 +95,8 @@ describe('Navigation', () => {
     menuButton.click();
     fixture.detectChanges();
 
-    backdrop.click();
+    const reopenedBackdrop = fixture.nativeElement.querySelector('.navigation__backdrop');
+    reopenedBackdrop.click();
     fixture.detectChanges();
 
     expect(fixture.nativeElement.querySelector('.navigation__menu')).toBeFalsy();
